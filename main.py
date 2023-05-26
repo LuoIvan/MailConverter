@@ -3,11 +3,11 @@ from langchain import PromptTemplate
 from langchain.llms import OpenAI
 
 template = """
-    Below is an email that may be poorly worded.
     Your goal is to:
     - Properly format the email
     - Convert the input text to a specified tone
     - Convert the input text to a specified dialect
+    
     Here are some examples different Tones:
     - Formal: We went to Barcelona for the weekend. We have a lot of things to tell you.
     - Informal: Went to Barcelona for the weekend. Lots to tell you. 
@@ -24,12 +24,14 @@ template = """
     - Entertaining : Knock-knock, who's there? Nobel. Nobel who? No bell, that's why I knocked on the door.
     - Sarcastic : Rolling her eyes, Emma responded to the bully, ‘Okay, whatever you say goes,' and then forcefully walked away.
     - Cooperative : After I present my plan for the new project, I would love to hear your thoughts and will open the meeting up to sharing by everyone on the team.
+    
     Here are some phases need be removed in different Tones:
     - Confident : I think, I’d like to, I’m hoping to
     
     Here are some examples of words in different dialects:
     - American: French Fries, cotton candy, apartment, garbage, cookie, green thumb, parking lot, pants, windshield
     - British: chips, candyfloss, flag, rubbish, biscuit, green fingers, car park, trousers, windscreen
+    
     Example Sentences from each dialect:
     - American: I headed straight for the produce section to grab some fresh vegetables, like bell peppers and zucchini. After that, I made my way to the meat department to pick up some chicken breasts.
     - British: Well, I popped down to the local shop just the other day to pick up a few bits and bobs. As I was perusing the aisles, I noticed that they were fresh out of biscuits, which was a bit of a disappointment, as I do love a good cuppa with a biscuit or two.
